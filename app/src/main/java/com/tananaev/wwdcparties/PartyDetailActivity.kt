@@ -12,7 +12,7 @@ class PartyDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_party_detail)
-        val toolbar = findViewById<Toolbar>(R.id.detail_toolbar)
+        val toolbar = findViewById(R.id.detail_toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
         val actionBar = supportActionBar

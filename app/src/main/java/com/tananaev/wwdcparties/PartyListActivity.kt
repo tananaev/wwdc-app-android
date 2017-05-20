@@ -25,13 +25,12 @@ class PartyListActivity : LifecycleActivity() {
 
         viewModel = ViewModelProviders.of(this)[PartyListViewModel::class.java]
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById(R.id.toolbar) as Toolbar
         toolbar.title = title
 
         viewModel?.users?.observe(this, Observer { users ->
             if (users != null) {
-                findViewById<RecyclerView>(R.id.party_list)?.adapter =
-                        PartyListAdapter(users)
+                (findViewById(R.id.party_list) as RecyclerView).adapter = PartyListAdapter(users)
             }
         })
     }
@@ -39,10 +38,10 @@ class PartyListActivity : LifecycleActivity() {
     inner class PartyListAdapter(private val items: List<Party>) : RecyclerView.Adapter<PartyListAdapter.ViewHolder>() {
 
         inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-            var header: TextView = view.findViewById(R.id.header)
-            val icon: ImageView = view.findViewById(R.id.icon)
-            val name: TextView = view.findViewById(R.id.name)
-            val time: TextView = view.findViewById(R.id.time)
+            var header = view.findViewById(R.id.header) as TextView
+            val icon = view.findViewById(R.id.icon) as ImageView
+            val name = view.findViewById(R.id.name) as TextView
+            val time = view.findViewById(R.id.time) as TextView
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

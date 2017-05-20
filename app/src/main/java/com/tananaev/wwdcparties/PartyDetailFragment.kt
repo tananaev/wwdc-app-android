@@ -36,21 +36,21 @@ class PartyDetailFragment : LifecycleFragment() {
 
         val view = inflater?.inflate(R.layout.party_detail, container, false)
 
-        Picasso.with(context).load(party?.logo).into(view?.findViewById<ImageView>(R.id.image))
+        Picasso.with(context).load(party?.logo).into(view?.findViewById(R.id.image) as ImageView)
 
-        view?.findViewById<TextView>(R.id.title)?.text = party?.title
-        view?.findViewById<TextView>(R.id.details)?.text = party?.details
+        (view.findViewById(R.id.title) as TextView).text = party?.title
+        (view.findViewById(R.id.details) as TextView).text = party?.details
 
-        view?.findViewById<TextView>(R.id.date)?.text = party?.formatDate()
-        view?.findViewById<TextView>(R.id.time)?.text = party?.formatTime()
+        (view.findViewById(R.id.date) as TextView).text = party?.formatDate()
+        (view.findViewById(R.id.time) as TextView).text = party?.formatTime()
 
-        view?.findViewById<TextView>(R.id.address1)?.text = party?.address1
-        view?.findViewById<TextView>(R.id.address2)?.text = party?.address2 + ", " + party?.address3
+        (view.findViewById(R.id.address1) as TextView).text = party?.address1
+        (view.findViewById(R.id.address2) as TextView).text = party?.address2 + ", " + party?.address3
 
-        view?.findViewById<View>(R.id.calendar)?.setOnClickListener(listenerCalendar)
-        view?.findViewById<View>(R.id.location)?.setOnClickListener(listenerLocation)
-        view?.findViewById<View>(R.id.mapOverlay)?.setOnClickListener(listenerLocation)
-        view?.findViewById<View>(R.id.website)?.setOnClickListener(listenerWebsite)
+        view.findViewById(R.id.calendar).setOnClickListener(listenerCalendar)
+        view.findViewById(R.id.location).setOnClickListener(listenerLocation)
+        view.findViewById(R.id.mapOverlay).setOnClickListener(listenerLocation)
+        view.findViewById(R.id.website).setOnClickListener(listenerWebsite)
 
         return view
     }
