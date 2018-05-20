@@ -1,10 +1,10 @@
 package com.tananaev.wwdcparties
 
-import android.arch.lifecycle.LifecycleActivity
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
@@ -13,9 +13,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
-import java.util.Locale
 
-class PartyListActivity : LifecycleActivity() {
+class PartyListActivity : FragmentActivity() {
 
     private var viewModel: PartyListViewModel? = null
 
@@ -25,12 +24,12 @@ class PartyListActivity : LifecycleActivity() {
 
         viewModel = ViewModelProviders.of(this)[PartyListViewModel::class.java]
 
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.title = title
 
         viewModel?.users?.observe(this, Observer { users ->
             if (users != null) {
-                (findViewById(R.id.party_list) as RecyclerView).adapter = PartyListAdapter(users)
+                findViewById<RecyclerView>(R.id.party_list).adapter = PartyListAdapter(users)
             }
         })
     }
@@ -38,10 +37,10 @@ class PartyListActivity : LifecycleActivity() {
     inner class PartyListAdapter(private val items: List<Party>) : RecyclerView.Adapter<PartyListAdapter.ViewHolder>() {
 
         inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-            var header = view.findViewById(R.id.header) as TextView
-            val icon = view.findViewById(R.id.icon) as ImageView
-            val name = view.findViewById(R.id.name) as TextView
-            val time = view.findViewById(R.id.time) as TextView
+            var header = view.findViewById<TextView>(R.id.header)
+            val icon = view.findViewById<ImageView>(R.id.icon)
+            val name = view.findViewById<TextView>(R.id.name)
+            val time = view.findViewById<TextView>(R.id.time)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
