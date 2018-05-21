@@ -37,7 +37,8 @@ class PartyListActivity : FragmentActivity() {
     inner class PartyListAdapter(private val items: List<Party>) : RecyclerView.Adapter<PartyListAdapter.ViewHolder>() {
 
         inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-            var header = view.findViewById<TextView>(R.id.header)
+            val divider = view.findViewById<View>(R.id.divider)
+            val header = view.findViewById<TextView>(R.id.header)
             val icon = view.findViewById<ImageView>(R.id.icon)
             val name = view.findViewById<TextView>(R.id.name)
             val time = view.findViewById<TextView>(R.id.time)
@@ -54,10 +55,16 @@ class PartyListActivity : FragmentActivity() {
 
             val date = item.formatDate()
             if (position == 0 || date != items[position - 1].formatDate()) {
+                holder.divider.visibility = View.VISIBLE
                 holder.header.visibility = View.VISIBLE
                 holder.header.text = date
             } else {
+                holder.divider.visibility = View.GONE
                 holder.header.visibility = View.GONE
+            }
+
+            if (position == 0) {
+                holder.divider.visibility = View.GONE
             }
 
             holder.name.text = item.title
