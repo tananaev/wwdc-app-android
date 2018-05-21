@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tananaev.wwdcparties">
+    package="com.tananaev.wwdc">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -17,7 +17,7 @@
             android:value="AIzaSyApw9TKEFv3qsLDO800KA_sRaiXhOpB-GM" />
 
         <activity
-            android:name=".PartyListActivity"
+            android:name="com.tananaev.wwdc.PartyListActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
             <intent-filter>
@@ -29,13 +29,13 @@
         </activity>
 
         <activity
-            android:name=".PartyDetailActivity"
-            android:parentActivityName=".PartyListActivity"
+            android:name="com.tananaev.wwdc.PartyDetailActivity"
+            android:parentActivityName="com.tananaev.wwdc.PartyListActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tananaev.wwdcparties.PartyListActivity" />
+                android:value="com.tananaev.wwdc.PartyListActivity" />
 
         </activity>
 

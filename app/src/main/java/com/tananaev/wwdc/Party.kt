@@ -1,4 +1,4 @@
-package com.tananaev.wwdcparties
+package com.tananaev.wwdc
 
 import java.io.Serializable
 import java.text.SimpleDateFormat

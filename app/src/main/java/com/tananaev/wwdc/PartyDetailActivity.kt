@@ -1,4 +1,4 @@
-package com.tananaev.wwdcparties
+package com.tananaev.wwdc
 
 import android.content.Intent
 import android.os.Bundle

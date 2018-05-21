@@ -8,5 +8,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.tananaev.wwdcparties.PartyListActivity"
+    tools:context="com.tananaev.wwdc.PartyListActivity"
     tools:listitem="@layout/party_list_content" />

@@ -1,4 +1,4 @@
-package com.tananaev.wwdcparties
+package com.tananaev.wwdc
 
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonReader

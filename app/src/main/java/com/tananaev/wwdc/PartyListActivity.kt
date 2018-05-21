@@ -1,4 +1,4 @@
-package com.tananaev.wwdcparties
+package com.tananaev.wwdc
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
