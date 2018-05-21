@@ -27,9 +27,9 @@ class PartyListActivity : FragmentActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.title = title
 
-        viewModel?.users?.observe(this, Observer { users ->
-            if (users != null) {
-                findViewById<RecyclerView>(R.id.party_list).adapter = PartyListAdapter(users)
+        viewModel?.parties?.observe(this, Observer { parties ->
+            if (parties != null) {
+                findViewById<RecyclerView>(R.id.party_list).adapter = PartyListAdapter(parties)
             }
         })
     }

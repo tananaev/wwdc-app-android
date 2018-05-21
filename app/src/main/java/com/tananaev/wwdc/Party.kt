@@ -1,11 +1,14 @@
 package com.tananaev.wwdc
 
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
 import java.io.Serializable
 import java.text.SimpleDateFormat
 import java.util.*
 
+@Entity
 data class Party(
-        val id: String,
+        @PrimaryKey val objectId: String,
         val icon: String,
         val logo: String,
         val title: String,
