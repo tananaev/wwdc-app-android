@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">WWDC Parties</string>
     <string name="website">Registration &amp; More info</string>
+    <string name="refresh">Refresh</string>
     <string name="service_error">Network error</string>
 </resources>

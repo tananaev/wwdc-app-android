@@ -4,19 +4,17 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.FragmentActivity
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 
-class PartyListActivity : FragmentActivity() {
+class PartyListActivity : AppCompatActivity() {
 
-    private var viewModel: PartyListViewModel? = null
+    private lateinit var viewModel: PartyListViewModel
+    private var refreshItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +22,35 @@ class PartyListActivity : FragmentActivity() {
 
         viewModel = ViewModelProviders.of(this)[PartyListViewModel::class.java]
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        toolbar.title = title
+        setSupportActionBar(findViewById(R.id.toolbar))
 
-        viewModel?.parties?.observe(this, Observer { parties ->
+        viewModel.parties.observe(this, Observer { parties ->
             if (parties != null) {
+                refreshItem?.isEnabled = true
+                refreshItem?.icon?.alpha = 0xff
                 findViewById<RecyclerView>(R.id.party_list).adapter = PartyListAdapter(parties)
             }
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu);
+        refreshItem = menu?.getItem(0)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.refresh -> {
+                item.isEnabled = false
+                item.icon.alpha = 0xff / 2
+                viewModel.refresh()
+                return true
+            }
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
+        }
     }
 
     inner class PartyListAdapter(private val items: List<Party>) : RecyclerView.Adapter<PartyListAdapter.ViewHolder>() {
