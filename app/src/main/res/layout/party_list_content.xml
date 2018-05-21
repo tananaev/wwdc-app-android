@@ -16,6 +16,7 @@
         android:paddingLeft="@dimen/spacing_normal"
         android:paddingRight="@dimen/spacing_normal"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textStyle="bold"
         android:visibility="gone" />
 
     <android.support.constraint.ConstraintLayout
