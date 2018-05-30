@@ -32,8 +32,8 @@ public class MainApplication extends Application {
 
     public static final String PREFERENCE_FAVORITES = "favorites";
 
-    private static final String DATABASE = "data.bin";
-    private static final String HOST = "https://api2017.wwdc.io/";
+    private static final String DATABASE = "data2018.bin";
+    private static final String HOST = "https://api2018.wwdc.io/";
 
     public interface DatabaseCallback {
         void onReady(Database data);
@@ -106,7 +106,7 @@ public class MainApplication extends Application {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(HOST).addConverterFactory(converterFactory).build();
 
-            retrofit.create(Service.class).getData().enqueue(new Callback<Data>() {
+            retrofit.create(ScheduleService.class).getData().enqueue(new Callback<Data>() {
                 @Override
                 public void onResponse(Call<Data> call, Response<Data> response) {
                     if (response.isSuccessful()) {

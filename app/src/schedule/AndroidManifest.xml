@@ -7,7 +7,7 @@
         android:name="com.tananaev.wwdc.schedule.MainApplication"
         android:icon="@mipmap/ic_schedule">
 
-        <meta-data android:name="DATABASE" android:value="data.db" />
+        <meta-data android:name="DATABASE" android:value="data2018.db" />
         <meta-data android:name="VERSION" android:value="1" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.tananaev.wwdc.schedule.model" />
