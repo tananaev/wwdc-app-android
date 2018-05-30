@@ -1,4 +1,4 @@
-package com.tananaev.wwdc
+package com.tananaev.wwdc.parties
 
 import android.arch.persistence.room.TypeConverter
 import com.squareup.moshi.JsonAdapter

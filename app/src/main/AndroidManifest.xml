@@ -16,7 +16,7 @@
             android:value="AIzaSyApw9TKEFv3qsLDO800KA_sRaiXhOpB-GM" />
 
         <activity
-            android:name="com.tananaev.wwdc.PartyListActivity"
+            android:name="com.tananaev.wwdc.parties.PartyListActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
             <intent-filter>
@@ -28,13 +28,13 @@
         </activity>
 
         <activity
-            android:name="com.tananaev.wwdc.PartyDetailActivity"
-            android:parentActivityName="com.tananaev.wwdc.PartyListActivity"
+            android:name="com.tananaev.wwdc.parties.PartyDetailActivity"
+            android:parentActivityName="com.tananaev.wwdc.parties.PartyListActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tananaev.wwdc.PartyListActivity" />
+                android:value="com.tananaev.wwdc.parties.PartyListActivity" />
 
         </activity>
 

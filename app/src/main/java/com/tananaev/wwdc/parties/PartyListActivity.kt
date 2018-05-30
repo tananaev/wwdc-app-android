@@ -1,4 +1,4 @@
-package com.tananaev.wwdc
+package com.tananaev.wwdc.parties
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -10,6 +10,7 @@ import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
+import com.tananaev.wwdc.R
 
 class PartyListActivity : AppCompatActivity() {
 

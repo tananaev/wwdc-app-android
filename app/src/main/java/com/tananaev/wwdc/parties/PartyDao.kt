@@ -1,4 +1,4 @@
-package com.tananaev.wwdc
+package com.tananaev.wwdc.parties
 
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.Dao

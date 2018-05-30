@@ -1,4 +1,4 @@
-package com.tananaev.wwdc
+package com.tananaev.wwdc.parties
 
 import retrofit2.Call
 import retrofit2.http.GET

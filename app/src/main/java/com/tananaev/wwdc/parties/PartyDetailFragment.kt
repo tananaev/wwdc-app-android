@@ -1,4 +1,4 @@
-package com.tananaev.wwdc
+package com.tananaev.wwdc.parties
 
 import android.content.Intent
 import android.net.Uri
@@ -15,6 +15,7 @@ import com.squareup.picasso.Picasso
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.LatLng
+import com.tananaev.wwdc.R
 
 
 class PartyDetailFragment : Fragment() {

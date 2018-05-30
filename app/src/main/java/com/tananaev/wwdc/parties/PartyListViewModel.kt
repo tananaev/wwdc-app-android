@@ -1,4 +1,4 @@
-package com.tananaev.wwdc
+package com.tananaev.wwdc.parties
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
@@ -12,6 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.Date
 import com.squareup.moshi.Moshi
+import com.tananaev.wwdc.R
 import java.util.concurrent.Executors
 
 class PartyListViewModel(application: Application) : AndroidViewModel(application) {
