@@ -1,6 +1,20 @@
 <resources>
-    <string name="app_name">WWDC Parties</string>
+    <string name="app_parties">WWDC Parties</string>
     <string name="website">Registration &amp; More info</string>
     <string name="refresh">Refresh</string>
     <string name="service_error">Network error</string>
+
+    <string name="app_schedule">WWDC Schedule</string>
+    <string name="session_number">Session %1$s</string>
+    <string name="menu_reload">Reload</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_filter">Filter</string>
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_clear">Clear All</string>
+    <string name="menu_type">Type</string>
+    <string name="menu_track">Track</string>
+    <string name="type_session">Session</string>
+    <string name="type_lab">Lab</string>
+    <string name="type_special">Special Event</string>
+    <string name="type_get_together">Get-Together</string>
 </resources>

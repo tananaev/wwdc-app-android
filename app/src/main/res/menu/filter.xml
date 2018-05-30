@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/filter_clear"
+        android:title="@string/menu_clear" />
+
+    <item
+        android:id="@+id/filter_favorites"
+        android:title="@string/menu_favorites"
+        android:checkable="true" />
+
+    <group
+        android:id="@+id/group_type"
+        android:title="@string/menu_type">
+
+        <item
+            android:id="@+id/filter_session"
+            android:title="@string/type_session"
+            android:checkable="true" />
+
+        <item
+            android:id="@+id/filter_lab"
+            android:title="@string/type_lab"
+            android:checkable="true" />
+
+        <item
+            android:id="@+id/filter_special"
+            android:title="@string/type_special"
+            android:checkable="true" />
+
+        <item
+            android:id="@+id/filter_get_together"
+            android:title="@string/type_get_together"
+            android:checkable="true" />
+
+    </group>
+
+    <group
+        android:id="@+id/group_track"
+        android:title="@string/menu_track">
+
+    </group>
+
+</menu>

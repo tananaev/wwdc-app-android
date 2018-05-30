@@ -7,37 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyApw9TKEFv3qsLDO800KA_sRaiXhOpB-GM" />
-
-        <activity
-            android:name="com.tananaev.wwdc.parties.PartyListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
-        <activity
-            android:name="com.tananaev.wwdc.parties.PartyDetailActivity"
-            android:parentActivityName="com.tananaev.wwdc.parties.PartyListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tananaev.wwdc.parties.PartyListActivity" />
-
-        </activity>
-
-    </application>
+        android:theme="@style/AppTheme" />
 
 </manifest>

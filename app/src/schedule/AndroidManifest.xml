@@ -3,6 +3,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:icon="@mipmap/ic_schedule" />
+        android:label="@string/app_schedule"
+        android:name="com.tananaev.wwdc.schedule.MainApplication"
+        android:icon="@mipmap/ic_schedule">
+
+        <meta-data android:name="DATABASE" android:value="data.db" />
+        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.tananaev.wwdc.schedule.model" />
+
+        <activity
+            android:name="com.tananaev.fmelib.EasyActivity" >
+            <meta-data android:name="defaultFragment" android:value="com.tananaev.wwdc.schedule.ScheduleFragment" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name="DetailsActivity"
+            android:targetActivity="com.tananaev.fmelib.EasyActivity"
+            android:parentActivityName="com.tananaev.fmelib.EasyActivity">
+            <meta-data android:name="defaultFragment" android:value="com.tananaev.wwdc.schedule.DetailsFragment" />
+        </activity-alias>
+
+    </application>
 
 </manifest>
