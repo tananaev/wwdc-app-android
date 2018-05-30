@@ -5,11 +5,23 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.tananaev.wwdcparties"
         minSdkVersion 17
         targetSdkVersion 27
         versionCode 2
         versionName "2.0"
+    }
+    flavorDimensions "default"
+    productFlavors {
+        parties {
+            dimension "default"
+            applicationId "com.tananaev.wwdcparties"
+            buildConfigField "boolean", "SCHEDULE", "false"
+        }
+        schedule {
+            dimension "default"
+            applicationId "com.tananaev.wwdcschedule"
+            buildConfigField "boolean", "SCHEDULE", "true"
+        }
     }
 }
 
