@@ -10,7 +10,6 @@ import com.tananaev.wwdc.schedule.model.Track;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 public class Database {
@@ -31,8 +30,7 @@ public class Database {
         if (currentEvent != null) {
             for (Content content : data.getContents()) {
                 if (content.getEventId().equals(currentEvent.getId())
-                        && content.getStartTime() != null && content.getEndTime() != null
-                        && content.getEndTime().after(new Date())) {
+                        && content.getStartTime() != null && content.getEndTime() != null) {
                     contents.add(content);
                 }
             }
