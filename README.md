@@ -1,12 +1,7 @@
-# WWDC Parties
+# [WWDC Schedule](https://play.google.com/store/apps/details?id=com.tananaev.wwdcschedule] and [WWDC Parties](https://play.google.com/store/apps/details?id=com.tananaev.wwdcparties)
 
-[![Get it on Google Play](http://www.tananaev.com/badges/google-play.svg)](https://play.google.com/store/apps/details?id=com.tananaev.wwdcparties)
-
-Aggregator of developers parties happening mostly for participants of Apple WWDC conference.
-
-Hottest startups and technology companies in Silicon Valley are organizing parties for developers who participate in WWDC.
-
-The app uses data from [Parties for WWDC](https://github.com/genadyo/WWDC) developed by [Genady Okrain](https://github.com/genadyo).
+WWDC Schedule - Android app for viewing WWDC conference session schedule
+WWDC Parties - Android app for third party events around WWDC conference
 
 ## Contacts
 
