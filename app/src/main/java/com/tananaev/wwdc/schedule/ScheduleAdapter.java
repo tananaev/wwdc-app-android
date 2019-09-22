@@ -2,8 +2,8 @@ package com.tananaev.wwdc.schedule;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -103,10 +103,10 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
 
         public ViewHolder(View itemView) {
             super(itemView);
-            header = (TextView) itemView.findViewById(R.id.header);
+            header = itemView.findViewById(R.id.header);
             colorView = itemView.findViewById(R.id.color);
-            titleView = (TextView) itemView.findViewById(R.id.title);
-            detailsView = (TextView) itemView.findViewById(R.id.details);
+            titleView = itemView.findViewById(R.id.title);
+            detailsView = itemView.findViewById(R.id.details);
         }
 
     }

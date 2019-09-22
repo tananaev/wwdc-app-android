@@ -1,4 +1,4 @@
-# [WWDC Schedule](https://play.google.com/store/apps/details?id=com.tananaev.wwdcschedule] and [WWDC Parties](https://play.google.com/store/apps/details?id=com.tananaev.wwdcparties)
+# [WWDC Schedule](https://play.google.com/store/apps/details?id=com.tananaev.wwdcschedule) and [WWDC Parties](https://play.google.com/store/apps/details?id=com.tananaev.wwdcparties)
 
 WWDC Schedule - Android app for viewing WWDC conference session schedule
 WWDC Parties - Android app for third party events around WWDC conference

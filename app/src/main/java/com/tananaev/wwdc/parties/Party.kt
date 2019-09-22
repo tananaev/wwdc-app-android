@@ -1,7 +1,7 @@
 package com.tananaev.wwdc.parties
 
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.PrimaryKey
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
 import java.text.SimpleDateFormat
 import java.util.*

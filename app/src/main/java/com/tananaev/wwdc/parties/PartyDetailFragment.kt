@@ -4,7 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.CalendarContract
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +18,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.tananaev.wwdc.R
 
 
-class PartyDetailFragment : Fragment() {
+class PartyDetailFragment : androidx.fragment.app.Fragment() {
 
     companion object {
         var EXTRA_PARTY = "party"

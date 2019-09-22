@@ -1,8 +1,8 @@
 package com.tananaev.wwdc.parties
 
-import android.arch.persistence.room.RoomDatabase
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.TypeConverters
+import androidx.room.RoomDatabase
+import androidx.room.Database
+import androidx.room.TypeConverters
 
 @Database(entities = [Party::class], version = 1)
 @TypeConverters(DateAdapter::class)

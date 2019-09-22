@@ -1,9 +1,9 @@
 package com.tananaev.wwdc.parties
 
 import android.app.Application
-import android.arch.lifecycle.AndroidViewModel
-import android.arch.lifecycle.MutableLiveData
-import android.arch.persistence.room.Room
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.room.Room
 import android.widget.Toast
 import retrofit2.Call
 import retrofit2.Callback

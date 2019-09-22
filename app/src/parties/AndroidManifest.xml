@@ -4,7 +4,8 @@
 
     <application
         android:label="@string/app_parties"
-        android:icon="@mipmap/ic_parties">
+        android:icon="@mipmap/ic_parties"
+        android:usesCleartextTraffic="true">
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
